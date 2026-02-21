@@ -1,6 +1,6 @@
 {
   "name": "@bowlly/mcp-server",
-  "version": "0.1.2",
+  "version": "0.1.6",
   "description": "MCP server for FitPick cat food product search and ingredient analysis",
   "type": "module",
   "bin": {
@@ -46,10 +46,10 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/bowlly/fitpick-mcp-server.git"
+    "url": "git+https://github.com/bhs324/bowlly-mcp-server.git"
   },
   "bugs": {
-    "url": "https://github.com/bowlly/fitpick-mcp-server/issues"
+    "url": "https://github.com/bhs324/bowlly-mcp-server/issues"
   },
-  "homepage": "https://github.com/bowlly/fitpick-mcp-server#readme"
+  "homepage": "https://github.com/bhs324/bowlly-mcp-server#readme"
 }
