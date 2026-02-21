@@ -1,0 +1,55 @@
+{
+  "name": "@bowlly/mcp-server",
+  "version": "0.1.2",
+  "description": "MCP server for FitPick cat food product search and ingredient analysis",
+  "type": "module",
+  "bin": {
+    "fitpick-mcp": "dist/index.js"
+  },
+  "files": [
+    "dist",
+    "scripts",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "tsc && chmod 755 dist/index.js",
+    "dev": "tsc --watch",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "postinstall": "node scripts/postinstall.js"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.26.0",
+    "zod": "^3.25.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22",
+    "typescript": "^5.9.3",
+    "vitest": "^3.0.0"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "claude",
+    "cat-food",
+    "pet-food",
+    "fitpick",
+    "ai-tools"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bowlly/fitpick-mcp-server.git"
+  },
+  "bugs": {
+    "url": "https://github.com/bowlly/fitpick-mcp-server/issues"
+  },
+  "homepage": "https://github.com/bowlly/fitpick-mcp-server#readme"
+}
