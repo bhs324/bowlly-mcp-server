@@ -48,11 +48,9 @@ export async function configureClaudeDesktop(): Promise<void> {
     }
 
     // Add/update Bowlly server config
-    const apiKey = process.env.FITPICK_API_KEY || "";
-    config.mcpServers.fitpick = {
+    config.mcpServers.bowlly = {
       command: "npx",
       args: ["-y", "@bowlly/mcp-server"],
-      env: apiKey ? { FITPICK_API_KEY: apiKey } : undefined,
     };
 
     // Ensure directory exists
@@ -77,7 +75,7 @@ export async function configureClaudeDesktop(): Promise<void> {
     console.log(
       JSON.stringify(
         {
-          fitpick: {
+          bowlly: {
             command: "npx",
             args: ["-y", "@bowlly/mcp-server"],
           },
@@ -99,12 +97,9 @@ Manual Claude Desktop configuration:
 
 {
   "mcpServers": {
-    "fitpick": {
+    "bowlly": {
       "command": "npx",
-      "args": ["-y", "@bowlly/mcp-server"],
-      "env": {
-        "FITPICK_API_KEY": "your-api-key-here"
-      }
+      "args": ["-y", "@bowlly/mcp-server"]
     }
   }
 }

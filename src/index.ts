@@ -20,17 +20,16 @@ Options:
   --help, -h     Show this help message
 
 Environment Variables:
-  FITPICK_API_KEY    Your Bowlly API key (required)
   FITPICK_API_BASE_URL  Bowlly API base URL (optional)
   FITPICK_API_URL       Alias for FITPICK_API_BASE_URL (optional)
 
-For more information: https://bowlly.io/docs/mcp
+For more information: https://bowlly.net
 `);
   process.exit(0);
 }
 
 if (args.includes("--version") || args.includes("-v")) {
-  console.log("0.1.2");
+  console.log("0.1.9");
   process.exit(0);
 }
 

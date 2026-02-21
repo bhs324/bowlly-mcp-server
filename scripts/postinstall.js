@@ -21,5 +21,4 @@ if (isGlobal) {
   console.log("  npx @bowlly/mcp-server --setup\n");
 }
 
-console.log("Or configure manually:");
-console.log("  https://bowlly.io/docs/mcp\n");
+console.log("Or configure manually - see README.md for instructions.");

@@ -1,6 +1,6 @@
 /**
  * Interactive CLI setup for Bowlly MCP Server
- * Handles API key provisioning and Claude Desktop configuration
+ * Configures Claude Desktop automatically
  */
 import readline from "readline";
 
@@ -17,33 +17,15 @@ export async function runSetup(): Promise<void> {
   const ask = (question: string): Promise<string> => new Promise((resolve) => rl.question(question, resolve));
 
   try {
-    // Check for existing config
-    const existingKey = process.env.FITPICK_API_KEY;
-    if (existingKey) {
-      console.log("✓ API key already configured\n");
-    } else {
-      console.log("📋 API Key Setup");
-      console.log("The Bowlly MCP server requires an API key.");
-      console.log("Visit https://bowlly.io/developer to get your free API key.\n");
-
-      const apiKey = await ask("Enter your Bowlly API key: ");
-      if (!apiKey.trim()) {
-        console.log("❌ Setup cancelled - API key is required");
-        process.exit(1);
-      }
-      // Store for configuration
-      process.env.FITPICK_API_KEY = apiKey.trim();
-    }
-
     // Configure Claude Desktop
-    console.log("\n🤖 Claude Desktop Configuration");
+    console.log("🤖 Claude Desktop Configuration");
     const shouldConfigure = await ask("Configure Claude Desktop automatically? (Y/n): ");
 
     if (shouldConfigure.toLowerCase() !== "n") {
       await configureClaudeDesktop();
     } else {
       console.log("\nSkipping Claude Desktop configuration.");
-      console.log("To configure manually, see: https://bowlly.io/docs/mcp");
+      console.log("See README.md for manual configuration instructions.");
     }
 
     console.log("\n✅ Setup complete!");
