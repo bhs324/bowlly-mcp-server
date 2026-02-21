@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /**
- * FitPick MCP Server Entry Point
+ * Bowlly MCP Server Entry Point
  */
 
 // Handle CLI commands before importing heavy dependencies
@@ -8,7 +8,7 @@ const args = process.argv.slice(2);
 
 if (args.includes("--help") || args.includes("-h")) {
   console.log(`
-FitPick MCP Server - Cat food product search and analysis
+Bowlly MCP Server - Cat food product search and analysis
 
 Usage:
   npx @bowlly/mcp-server [options]
@@ -20,11 +20,11 @@ Options:
   --help, -h     Show this help message
 
 Environment Variables:
-  FITPICK_API_KEY    Your FitPick API key (required)
-  FITPICK_API_BASE_URL  FitPick API base URL (optional)
+  FITPICK_API_KEY    Your Bowlly API key (required)
+  FITPICK_API_BASE_URL  Bowlly API base URL (optional)
   FITPICK_API_URL       Alias for FITPICK_API_BASE_URL (optional)
 
-For more information: https://fitpick.io/docs/mcp
+For more information: https://bowlly.io/docs/mcp
 `);
   process.exit(0);
 }

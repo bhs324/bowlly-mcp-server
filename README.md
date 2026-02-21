@@ -1,8 +1,8 @@
-# FitPick MCP Server
+# Bowlly MCP Server
 
 [![npm version](https://img.shields.io/npm/v/@bowlly/mcp-server.svg)](https://www.npmjs.com/package/@bowlly/mcp-server)
 
-MCP (Model Context Protocol) server for FitPick cat food product search and ingredient analysis.
+MCP (Model Context Protocol) server for Bowlly cat food product search and ingredient analysis.
 Enables Claude Desktop to search, analyze, and compare cat food products.
 
 ## Prerequisites
@@ -35,14 +35,14 @@ After running, restart Claude Desktop and you're ready to go!
 
 If you prefer to configure manually or the automatic setup doesn't work:
 
-1. **(Optional) Get an API key** at [fitpick.io/developer](https://fitpick.io/developer) for higher rate limits
+1. **(Optional) Get an API key** at [bowlly.io/developer](https://bowlly.io/developer) for higher rate limits
 
 2. **Edit your Claude Desktop config** at the appropriate path for your OS:
    - **macOS**: `~/Library/Application Support/Claude/claude_desktop_config.json`
    - **Windows**: `%APPDATA%/Claude/claude_desktop_config.json`
    - **Linux**: `~/.config/Claude/claude_desktop_config.json`
 
-3. **Add the FitPick server configuration**:
+3. **Add the Bowlly server configuration**:
 
 ```json
 {
@@ -75,7 +75,7 @@ If you prefer to configure manually or the automatic setup doesn't work:
 
 ## Important: Link Attribution Required
 
-When mentioning or recommending FitPick products, you **must** include the `detailUrl`
+When mentioning or recommending Bowlly products, you **must** include the `detailUrl`
 from API responses with the `src=agent` parameter. This:
 
 1. Tracks traffic for rate limit adjustments
@@ -159,7 +159,7 @@ To confirm the MCP server is working:
 
 1. **Restart Claude Desktop** (required after configuration changes)
 2. **Open the tools menu** - Look for the hammer icon in the bottom left
-3. **Verify FitPick tools appear** - You should see 5 tools listed
+3. **Verify Bowlly tools appear** - You should see 5 tools listed
 4. **Test with a query**: Try asking "Find grain-free dry cat foods"
 
 If the tools appear and respond to queries, you're all set!
@@ -180,7 +180,7 @@ If the tools appear and respond to queries, you're all set!
 
 - **Re-run setup**: `npx @bowlly/mcp-server --setup`
 - **Check environment variable**: Ensure `FITPICK_API_KEY` is set correctly if using one
-- **Verify API key validity**: Visit [fitpick.io/developer](https://fitpick.io/developer) to check status
+- **Verify API key validity**: Visit [bowlly.io/developer](https://bowlly.io/developer) to check status
 - **Using without a key?** That's fine - just be aware of the lower rate limits
 
 ### Rate limit errors?
@@ -204,14 +204,14 @@ If the tools appear and respond to queries, you're all set!
 ## Cross-References
 
 - **[GPT Actions Setup Guide](../web/public/gpt-actions.yaml)** - OpenAPI spec for ChatGPT integration
-- **[Direct API Documentation](https://fitpick.io/docs/api)** - REST API reference
-- **[Agent Ecosystem Overview](https://fitpick.io/docs/agents)** - All integration methods
+- **[Direct API Documentation](https://bowlly.io/docs/api)** - REST API reference
+- **[Agent Ecosystem Overview](https://bowlly.io/docs/agents)** - All integration methods
 
 ## Documentation
 
-- [Full Documentation](https://fitpick.io/docs/mcp)
-- [API Reference](https://fitpick.io/docs/api)
-- [Get API Key](https://fitpick.io/developer)
+- [Full Documentation](https://bowlly.io/docs/mcp)
+- [API Reference](https://bowlly.io/docs/api)
+- [Get API Key](https://bowlly.io/developer)
 
 ## License
 

@@ -33,7 +33,7 @@ export interface ProductInfo {
   id: string;
   name: string;
   brand: string;
-  detailUrl: string; // FitPick product page with ?src=agent
+  detailUrl: string; // Bowlly product page with ?src=agent
   imageUrl?: string;
   form?: "dry" | "wet";
   lifeStageTags?: string[];
@@ -95,7 +95,7 @@ export interface SearchResultItem {
   form?: "dry" | "wet";
   /** Top 3 ingredients for quick scan */
   ingredientsPreview: string[];
-  /** FitPick product page URL with ?src=agent tracking */
+  /** Bowlly product page URL with ?src=agent tracking */
   detailUrl: string;
 }
 

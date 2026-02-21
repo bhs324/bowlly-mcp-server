@@ -1,7 +1,7 @@
 /**
  * search_products MCP Tool
  *
- * Search FitPick's cat food database by ingredients, health conditions, or food form.
+ * Search Bowlly's cat food database by ingredients, health conditions, or food form.
  * Supports filtering, sorting, and cursor-based pagination.
  */
 
@@ -30,7 +30,7 @@ export function registerSearchTool(
 ): void {
   server.tool(
     "search_products",
-    "Search FitPick's cat food database by ingredients, health conditions, or food form. Use this when the user asks to find, filter, or recommend cat foods. Returns a summary list — use get_product_detail for full information about specific products.",
+    "Search Bowlly's cat food database by ingredients, health conditions, or food form. Use this when the user asks to find, filter, or recommend cat foods. Returns a summary list — use get_product_detail for full information about specific products.",
     {
       query: z.string().max(256).optional().describe("Search by product name, brand, or ingredient"),
       form: z.enum(["dry", "wet"]).optional().describe("Food form: dry kibble or wet canned food"),

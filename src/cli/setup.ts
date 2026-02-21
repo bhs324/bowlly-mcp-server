@@ -1,5 +1,5 @@
 /**
- * Interactive CLI setup for FitPick MCP Server
+ * Interactive CLI setup for Bowlly MCP Server
  * Handles API key provisioning and Claude Desktop configuration
  */
 import readline from "readline";
@@ -7,7 +7,7 @@ import readline from "readline";
 import { configureClaudeDesktop } from "./configure.js";
 
 export async function runSetup(): Promise<void> {
-  console.log("🔧 FitPick MCP Server Setup\n");
+  console.log("🔧 Bowlly MCP Server Setup\n");
 
   const rl = readline.createInterface({
     input: process.stdin,
@@ -23,10 +23,10 @@ export async function runSetup(): Promise<void> {
       console.log("✓ API key already configured\n");
     } else {
       console.log("📋 API Key Setup");
-      console.log("The FitPick MCP server requires an API key.");
-      console.log("Visit https://fitpick.io/developer to get your free API key.\n");
+      console.log("The Bowlly MCP server requires an API key.");
+      console.log("Visit https://bowlly.io/developer to get your free API key.\n");
 
-      const apiKey = await ask("Enter your FitPick API key: ");
+      const apiKey = await ask("Enter your Bowlly API key: ");
       if (!apiKey.trim()) {
         console.log("❌ Setup cancelled - API key is required");
         process.exit(1);
@@ -43,13 +43,13 @@ export async function runSetup(): Promise<void> {
       await configureClaudeDesktop();
     } else {
       console.log("\nSkipping Claude Desktop configuration.");
-      console.log("To configure manually, see: https://fitpick.io/docs/mcp");
+      console.log("To configure manually, see: https://bowlly.io/docs/mcp");
     }
 
     console.log("\n✅ Setup complete!");
     console.log("\nNext steps:");
     console.log("1. Restart Claude Desktop if it's running");
-    console.log("2. The FitPick tools should now be available");
+    console.log("2. The Bowlly tools should now be available");
     console.log("\nTry asking Claude: 'Find grain-free dry cat foods'");
   } finally {
     rl.close();

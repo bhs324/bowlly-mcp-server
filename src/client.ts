@@ -1,7 +1,7 @@
 /**
- * HTTP Client for FitPick Agent API
+ * HTTP Client for Bowlly Agent API
  *
- * Wraps native fetch (Node >=22) to call the FitPick Agent API.
+ * Wraps native fetch (Node >=22) to call the Bowlly Agent API.
  * Session ID in User-Agent header, API key in x-api-key header.
  */
 

@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /**
- * Post-install hook for FitPick MCP Server
+ * Post-install hook for Bowlly MCP Server
  * Prompts user to run setup if not already configured
  */
 
@@ -11,7 +11,7 @@ if (process.env.CI || process.env.CONTINUOUS_INTEGRATION) {
   process.exit(0);
 }
 
-console.log("\n🎉 FitPick MCP Server installed!\n");
+console.log("\n🎉 Bowlly MCP Server installed!\n");
 
 if (isGlobal) {
   console.log("To complete setup, run:");
@@ -22,4 +22,4 @@ if (isGlobal) {
 }
 
 console.log("Or configure manually:");
-console.log("  https://fitpick.io/docs/mcp\n");
+console.log("  https://bowlly.io/docs/mcp\n");

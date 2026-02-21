@@ -47,7 +47,7 @@ export async function configureClaudeDesktop(): Promise<void> {
       config.mcpServers = {};
     }
 
-    // Add/update FitPick server config
+    // Add/update Bowlly server config
     const apiKey = process.env.FITPICK_API_KEY || "";
     config.mcpServers.fitpick = {
       command: "npx",
@@ -68,7 +68,7 @@ export async function configureClaudeDesktop(): Promise<void> {
     }
 
     console.log(`✓ Claude Desktop configured at: ${configPath}`);
-    console.log("  The FitPick MCP server has been added to your Claude Desktop.");
+    console.log("  The Bowlly MCP server has been added to your Claude Desktop.");
   } catch (error) {
     console.error("❌ Failed to configure Claude Desktop:", error instanceof Error ? error.message : error);
     console.log("\nManual configuration required:");

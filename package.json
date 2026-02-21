@@ -1,7 +1,7 @@
 {
   "name": "@bowlly/mcp-server",
-  "version": "0.1.6",
-  "description": "MCP server for FitPick cat food product search and ingredient analysis",
+  "version": "0.1.7",
+  "description": "MCP server for Bowlly cat food product search and ingredient analysis",
   "type": "module",
   "bin": {
     "fitpick-mcp": "dist/index.js"

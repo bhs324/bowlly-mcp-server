@@ -105,5 +105,5 @@ export async function startServer(): Promise<void> {
   process.on("exit", cleanup);
 
   await server.connect(transport);
-  console.error("FitPick MCP Server running on stdio");
+  console.error("Bowlly MCP Server running on stdio");
 }
